@@ -7,6 +7,7 @@
 Our project will help a business owner in Chicago to open his/her shop at a new location. 
 For the new shop s/he is trying to open is a deli that sells sandwiches and coffee.
 To help our customer, we will focus on maximizing the expected profits by estimating the revenues and costs. 
+The goal of the project is to have an algorithm that can provide small business owners with recommendation of where to open stores with the estimated profit for business of their interest using traffic information, real-estate values, raw material costs, labor costs. The interaction with the business owners will be mediated by a website or GUI like Zillow where they can search for the location and business type and get the estimated profits. 
 
 ### Revenue
 Revenue will come from the sales of products (sandwiches and coffee) which is the sum of price the items multiplied by how many each items are sold. The prices will be adjusted according the cost within a reasonable range. The number of sales will be estimated using the traffic flow by the public transit. 
@@ -80,7 +81,9 @@ Magnified CTA ridership for the loop
 
 Next, we identify which stations actually have the highest ridership. Before we go into analysis, we have to decide what kind of deli/coffee shop the owner is interested in; is it going to be fast-paced, take-out shop for business people, or is it going to have more relaxed atmosphere for brunch and hanging-out? In our case, the owner is interested in opening a fast-paced deli/coffeeshop. Table below shows that the order of highest average ridership for the stations is indeed different for weekdays and holidays and therefore it is essential to consider the two day types separately for our purpose. 
 
-![fig2](https://github.com/hyojunada/chicago_cta/blob/master/result/mean_ridership.png)
+<p align="center">
+  <img src="https://github.com/hyojunada/chicago_cta/blob/master/result/mean_ridership.png">
+</p>
 
 We look at the 5 stations with the highest traffic during the weekdays. 
 <p align="center">
@@ -100,15 +103,26 @@ From this simple scatter plot, we find that Clark/Lake and Lake/State stations h
 
 Since we have approximate locations (between Clark/Lake and Lake/State statioins), we want to estimate whether the location is saturated with similar businesses or the existing businesses can bring synergy (if there are a lot of non-competing businesses in the area, the people who work there can be our potential customers). 
 
+I first look at the current businesses that can be potential competitors. The below figure shows all the business licenses issured for retailors that sell perishable food (e.g. Subway, Starbucks) since 2016 without duplicates for mutiple licenses issued for the same store. 
 
-Then I looked at the changes in follower size (normalized over company's size) over time for individual companies in each industry
-Shown below is the example for Investment Banking industry. From this I can identify which company's gaining more followers and whether it's growing faster or slower than the company norm. In [this notebook](https://github.com/hyojunada/data_incubator/blob/master/notebook/Section3-fig2_increase_of_followers_over_time.ipynb) you can do this for individual companies and see aggregated result for the entire industry. The aggregated result for the entire industry shows how much online interst the industry has compared to its size and whether the interest is growing or not. 
+<p align="center">
+  <img src="https://github.com/hyojunada/chicago_cta/blob/master/result/number_of_food_retailor.png">
+</p>
 
+The zip code for the two stations is 60601, and the number of perishable food stores are ranked at 33rd compared to other zip codes in Chicago. Compared to the foot traffic population, there is not as much perishable food retailors to other zip codes, and it is safe to assume that competitors are not at a threatening numbers in this zip code.
+
+(for more detailed step-by-step analysis, please checkout this [notebook](https://github.com/hyojunada/chicago_cta/blob/master/notebook/Project-Business.ipynb))
 
 ## Next Steps
-### Data aquisition and exploration
-1. Use Glassdor reviews to measure employees and interviewees' opinions on the companys over time. 
-2. Use the Job posting data to measure the expansion of a company as a measure of growth
-3. Use the stock prices over time to measure the performance of a company.
-## Build predictive model
-After elementary analysis reveals an underlying trend that prompts further exploration. For my project I propose to expand these efforts by building a model that takes advantage of the underlying trend in four different data sets. I will combine LinkedIn and Glassdoor data as predictors and Job posting and stock prices as one target variable. The model will allow job seekers to be able to evaluate the potential growth of a company and this can be expanded to other groups of interests such as investorsin when evaluating a company.
+### Data collection and analysis
+-**Bus traffic**
+Use the data from Chicago CTA for bus traffic, have more concrete estimation of foot traffic in each area
+-**Real-estate**
+Use the data from Zillow to estimate the rent price for the store. Also, we need to acquire more accurate data regarding the retail shops instead of projecting the estimate of household rents. 
+### Build predictive model
+-**Variable cost analysis**
+Variable costs like raw materials and labor are essential to calculate the costs. 
+-**Price adjustment**
+Above analysis will enable us to estimate the appropriate prices for the products that are sold at the store. 
+-**Predictive model for estimating profit and recommendation of the ideal location**
+After elementary analysis reveals an underlying trend that prompts further exploration we will build a predictive model for recommendation of the location for stores. For my project I propose to expand these efforts by building a model that takes advantage of in four different data sets. The model will allow small business owners to be able to evaluate the potential success of the store and this can be expanded to other business other than deli/coffee shops.
