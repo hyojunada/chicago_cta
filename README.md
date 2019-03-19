@@ -87,7 +87,7 @@ From this simple scatter plot, we find that Clark/Lake and Lake/State stations h
 <p align="center">
   <img src="https://github.com/hyojunada/chicago_cta/blob/master/result/google_map.png">
 </p>
-
+Outline of zip code 60601 is drawn in pink in the figure.
 
 (for more detailed step-by-step analysis, please checkout this [notebook](https://nbviewer.jupyter.org/github/hyojunada/chicago_cta/blob/master/notebook/Project-Traffic.ipynb))
 
