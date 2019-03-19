@@ -130,7 +130,7 @@ After elementary analysis reveals an underlying trend that prompts further explo
 
 **Revenue function**
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=R&space;=&space;\sum&space;_{items}Customers(N_{items})&space;*&space;price(x_{items})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R&space;=&space;\sum&space;_{item}Customers(N_{item})&space;*&space;price(x_{item})" title="R = \sum _{items}Customers(N_{items}) * price(x_{items})" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=R&space;=&space;\sum&space;_{items}Customers(N_{items})&space;*&space;price(item)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R&space;=&space;\sum&space;_{item}Customers(N_{item})&space;*&space;price(item)" title="R = \sum _{item}Customers(N_{item}) * price(item)" /></a>
 
 Here, the total number of customers is the sum of the customers who bought each item. 
 
@@ -144,7 +144,23 @@ For simplicity we can use the average price of the items that are sold at the st
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{aligned}&space;C&space;&=&space;fixed\&space;costs&space;&plus;&space;variable\&space;costs&space;\\&space;&=&space;(rent&space;&plus;&space;labor&space;&plus;&space;etc)&space;&plus;&space;(\sum_{items}N_{items}&space;*&space;cost(raw\&space;materials)_{item})&space;\end{aligned}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{aligned}&space;C&space;&=&space;fixed\&space;costs&space;&plus;&space;variable\&space;costs&space;\\&space;&=&space;(rent&space;&plus;&space;labor&space;&plus;&space;etc)&space;&plus;&space;(\sum_{items}N_{items}&space;*&space;cost(raw\&space;materials)_{item})&space;\end{aligned}" title="\begin{aligned} C &= fixed\ costs + variable\ costs \\ &= (rent + labor + etc) + (\sum_{items}N_{items} * cost(raw\ materials)_{item}) \end{aligned}" /></a>
 
-In our predictive model, one of the most important steps is estimating the number of customers. To do so, I suggest using multi-layer network, where each layer would account for CTA 'L' network, CTA bus route network and residence network. Using networks we can have robust estimation of potential customers how neighboring nodes and different layers affect each other. 
+Similar to revenue, we can substitute the cost of individual items with the average of the entire inventory. Thus, the cost function will be simplified to:
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;fixed\&space;costs&space;&plus;&space;N_{total}*cost_{average}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;fixed\&space;costs&space;&plus;&space;N_{total}*cost_{average}" title="C = fixed\ costs + N_{total}*cost_{average}" /></a>
 
+In our predictive model, one of the most important steps is estimating the number of customers. To do so, I suggest using multi-layer network, where each layer would account for CTA 'L' network, CTA bus route network and residence network. Using networks we can have robust estimation of potential customers how neighboring nodes and different layers affect each other.
+
+Which leaves us with the fixed costs, which by large part is the rent. The rent is determined by the location and square footage, which I believe would be solvable wih available real-estate data.
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=rent&space;=&space;f(location,&space;ft^2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?rent&space;=&space;f(location,&space;ft^2)" title="rent = f(location, ft^2)" /></a>
+
+Next step is estimating the cost of making each items. The owner of the business has to provide us with this information. However, we can further simplify the problem by having a comparitive goal, such as the cost of an individual item should be less than certain percentage of the price. 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=cost&space;\leq&space;p*price(x_{item})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?cost&space;\leq&space;p*price(x_{item})" title="cost \leq p*price(x_{item})" /></a>
+
+Then the profit equation further reduces to 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=R&space;\geq&space;(1-p)*price_{average}*N_{total}&space;-&space;fixed\&space;costs" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R&space;\geq&space;(1-p)*price_{average}*N_{total}&space;-&space;fixed\&space;costs" title="R \geq (1-p)*price_{average}*N_{total} - fixed\ costs" /></a>
+
+And now we will have all the information to build a simple predictive model that can robustly estimate the price and profit for each location for different businesses. 
 
