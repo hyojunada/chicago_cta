@@ -160,7 +160,7 @@ Next step is estimating the cost of making each items. The owner of the business
 
 Then the profit equation further reduces to 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=R&space;\geq&space;(1-p)*price_{average}*N_{total}&space;-&space;fixed\&space;costs" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R&space;\geq&space;(1-p)*price_{average}*N_{total}&space;-&space;fixed\&space;costs" title="R \geq (1-p)*price_{average}*N_{total} - fixed\ costs" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=P&space;\geq&space;(1-p)*price_{average}*N_{total}&space;-&space;fixed\&space;costs" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P&space;\geq&space;(1-p)*price_{average}*N_{total}&space;-&space;fixed\&space;costs" title="P \geq (1-p)*price_{average}*N_{total} - fixed\ costs" /></a>
 
 And now we will have all the information to build a simple predictive model that can robustly estimate the price and profit for each location for different businesses. 
 
