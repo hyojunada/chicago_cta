@@ -123,3 +123,5 @@ Above analysis will enable us to estimate the appropriate prices for the product
 
 -**Predictive model for estimating profit and recommendation of the ideal location**
 After elementary analysis reveals an underlying trend that prompts further exploration we will build a predictive model for a recommendation of the location for stores. For my project, I propose to expand these efforts by building a model that takes advantage of four different data sets. The model will allow small business owners to be able to evaluate the potential success of the store and this can be expanded to other business other than deli/coffee shops.
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=Profit&space;(P(x))&space;=&space;Revenu(R(x))&space;-&space;Cost(C(x))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Profit&space;(P(x))&space;=&space;Revenu(R(x))&space;-&space;Cost(C(x))" title="Profit (P(x)) = Revenu(R(x)) - Cost(C(x))" /></a>
