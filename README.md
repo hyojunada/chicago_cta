@@ -101,7 +101,7 @@ I first look at the current businesses that can be potential competitors. The be
 
 The zip code for the two stations is 60601, and the number of perishable food stores is ranked at 33rd compared to other zip codes in Chicago. Compared to the foot traffic population, there are not as much perishable food retailers to other zip codes, and it is safe to assume that competitors are not at threatening numbers in this zip code.
 
-(for more detailed step-by-step analysis, please checkout this [notebook](https://github.com/hyojunada/chicago_cta/blob/master/notebook/Project-Business.ipynb))
+(for more detailed step-by-step analysis, please checkout this [notebook](https://github.com/hyojunada/chicago_cta/blob/master/notebook/Project-business.ipynb))
 
 ## Next Steps
 ### Data collection and analysis
