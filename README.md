@@ -72,8 +72,9 @@ By visualizing CTA 'L' riderships at each stations we can get a general overview
 ![fig1](https://github.com/hyojunada/chicago_cta/blob/master/result/cta_l_ridership.png)
 
 Magnified CTA ridership for the loop 
-
-![fig1-1](https://github.com/hyojunada/chicago_cta/blob/master/result/loop_cta_l_ridership.png)
+<p align="center">
+ <img width="438/1.5" height="511/1.5"  src="https://github.com/hyojunada/chicago_cta/blob/master/result/loop_cta_l_ridership.png">
+</p>
 
 Next, we identify which stations actually have the highest ridership. Before we go into analysis, we have to decide what kind of deli/coffee shop the owner is interested in; is it going to be fast-paced, take-out shop for business people, or is it going to have more relaxed atmosphere for brunch and hanging-out? In our case, the owner is interested in opening a fast-paced deli/coffeeshop. Table below shows that the order of highest average ridership for the stations is indeed different for weekdays and holidays and therefore it is essential to consider the two day types separately for our purpose. 
 
@@ -83,7 +84,6 @@ We look at the 5 stations with the highest traffic during the weekdays.
 <p align="center">
   <img src="https://github.com/hyojunada/chicago_cta/blob/master/result/highest_station_ridership_W.png">
 </p>
-![fig3](https://github.com/hyojunada/chicago_cta/blob/master/result/highest_station_ridership_W.png)
 
 From this simple scatter plot, we find that Clark/Lake and Lake/State stations have the highest ridership as well as steady growth in the ridership compared to other three stations. Moreover, these two stations are close together, with only two and half blocks apart. A fast take-out deli/coffee shop between these two stations would be ideal. 
 
