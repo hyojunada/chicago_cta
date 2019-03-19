@@ -91,6 +91,8 @@ From this simple scatter plot, we find that Clark/Lake and Lake/State stations h
 
 (for more detailed step-by-step analysis, please checkout this [notebook](https://github.com/hyojunada/chicago_cta/blob/master/notebook/Project-Traffic.ipynb))
 
+['test'](https://nbviewer.jupyter.org/github/hyojunada/chicago_cta/blob/master/notebook/Project-CTA_map.ipynb)
+
 ### Business near the highest traffic stations
 
 Since we have approximate locations (between Clark/Lake and Lake/State stations), we want to estimate whether the location is saturated with similar businesses or the existing businesses can bring synergy (if there are a lot of non-competing businesses in the area, the people who work there can be our potential customers). 
