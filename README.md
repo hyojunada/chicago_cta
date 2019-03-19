@@ -2,7 +2,9 @@
 
 ## Project Summary
 
-Our project will help a business owner in Chicago to open his/her shop at a new location. For the new shop s/he is trying to open is a deli that sells sandwiches and coffee. To help our customer, we will focus on maximizing the expected profits by estimating the revenues and costs. The goal of the project is to have an algorithm that can provide small business owners with a recommendation of where to open stores with the estimated profit for a business of their interest using traffic information, real-estate values, raw material costs, labor costs. The interaction with the business owners will be mediated by a website or GUI similar to Zillow where they can search for the location and business type and get the estimated profits.
+Our project will help a business owner in Chicago to open his/her shop at a new location. For the new shop s/he is trying to open is a deli that sells sandwiches and coffee. To help our customer, we will focus on maximizing the expected profits by estimating the revenues and costs. After the primary analysis of the available data, we recommend the business owner to open Clark/Lake and Lake/State 'L' stations. 
+
+The larger goal of the project is to have an algorithm that can provide small business owners with a recommendation of where to open stores with the estimated profit for a business of their interest using traffic information, real-estate values, raw material costs, labor costs. The interaction with the business owners will be mediated by a website or GUI similar to Zillow where they can search for the location and business type and get the estimated profits.
 
 ### Revenue
 Revenue will come from the sales of products (sandwiches and coffee) which is the sum of prices for the items multiplied by how many each item is sold. The prices will be adjusted according to the cost within a reasonable range. The number of sales will be estimated using the traffic flow by public transit.
