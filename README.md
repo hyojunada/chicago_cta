@@ -1,5 +1,3 @@
-# chicago_cta
-
 # Helping business owners in Chicago
 
 ## Project Summary
@@ -115,14 +113,19 @@ The zip code for the two stations is 60601, and the number of perishable food st
 
 ## Next Steps
 ### Data collection and analysis
+
 -**Bus traffic**
 Use the data from Chicago CTA for bus traffic, have more concrete estimation of foot traffic in each area
+
 -**Real-estate**
 Use the data from Zillow to estimate the rent price for the store. Also, we need to acquire more accurate data regarding the retail shops instead of projecting the estimate of household rents. 
 ### Build predictive model
+
 -**Variable cost analysis**
 Variable costs like raw materials and labor are essential to calculate the costs. 
+
 -**Price adjustment**
 Above analysis will enable us to estimate the appropriate prices for the products that are sold at the store. 
+
 -**Predictive model for estimating profit and recommendation of the ideal location**
 After elementary analysis reveals an underlying trend that prompts further exploration we will build a predictive model for recommendation of the location for stores. For my project I propose to expand these efforts by building a model that takes advantage of in four different data sets. The model will allow small business owners to be able to evaluate the potential success of the store and this can be expanded to other business other than deli/coffee shops.
