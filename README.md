@@ -5,14 +5,14 @@
 ## Project Summary
 
 Our project will help a business owner in Chicago to open his/her shop at a new location. 
-The new shop s/he is trying to open is a deli that sells sandwiches and coffee. 
+The new shop s/he is trying to open is a deli that sells sandwiches and coffee.
 To help our customer, we will focus on maximizing the expected profits by estimating the revenues and costs. 
 
 ### Revenue
-Revenue will come from the sales of products (sandwiches and coffee), the prices will be adjusted according the cost within a reasonable range. The number of sales will be estimated using the traffic flow by the public transit. 
+Revenue will come from the sales of products (sandwiches and coffee) which is the sum of price the items multiplied by how many each items are sold. The prices will be adjusted according the cost within a reasonable range. The number of sales will be estimated using the traffic flow by the public transit. 
 
 ### Cost
-Cost will come from many different factors. For a quick assessment, we will mainly be using the rent the s/he has to pay. The cost of ingredients and paying the employees will be consistent regardless of the location, therefore we will delve more into it after we are done with the factors with higher impact. 
+Cost will come from many different factors. There will be fixed cost, such as rent and employee salary. The variable costs will be cost of raw materials. For a quick assessment, we will mainly be using the rent the s/he has to pay. The cost of ingredients and paying the employees will be consistent regardless of the location, therefore we will delve more into it after we are done with the factors with higher impact. 
 
 ## Project motivation
 
@@ -25,26 +25,47 @@ and also see if there are other business that can help our customer's business. 
 values of the neighborhood. Often times the largest expenses in running a business comes from the rent, therefore considering the rent will be important factor in estimating the expected expenses and profits.  
 
 ## Project data
+
 ### Transit data
  - **CTA - Ridership - 'L' Station Entries - Daily Totals**
  
 The database tracks the number of people to go through the turnstiles at every Chicago "L" station since 2001.
 
- - **CTA - Ridership - Bus Routes - Daily Totals by Route**
+ - **[CTA - Ridership - Bus Routes - Daily Totals by Route](https://data.cityofchicago.org/Transportation/CTA-Ridership-Bus-Routes-Daily-Totals-by-Route/jyb9-n7fm)**
  
 The database tracks the number of people to go through the turnstiles at every Chicago CTA bus station since 2001.
  
 ### Business data
 
-- **Zillow Real Estate Data**
+- **[Business Licenses](https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr)**
+
+The database contains the business licenses issued by City of Chicago from 2001.
+
+- **[Zillow Real Estate Data](https://www.zillow.com/research/data/)**
 
 The database contains the medium residential property renting values for each zip code from 2010.
 
+(Ideally, we would want data of all traffic, including foot and cars, and the density of the population in the area to estimate the potential number of customers, and real estate data for retail stores with differe square footage. Also, in addition to those data, to calculate the costs, we will need data on wage limit in Chicago, wage distribution, and costs of the raw material)
+
 ## Preliminary Analysis
-### LinkedIn follower trends
-As a preliminary analysis I looked at the size of the followers for each company on LinkedIn and normalized for its size. As the estimation of company size, I used the number of employees on LinkedIn. 
-The follower size can be divided roughly into 3 groups, 0-50, 50-300 and 300-600. 
-Which means the group that has larger follower size is attracting more followers online, which can be an indicator for potential growth
+### Warm up
+#### Stations with the highest average ridership
+Station with the highest average ridership per day is Clark/Lake, with mean of 13972.55(~13973)  people per day. 
+
+#### What’s the standard deviation for the Washington/Wabash stop? What’s your hypothesis for why?
+
+The standard deviation of the ridershp for Washington/Wabash is 2831.97 (~2832). 
+
+In the data set, Washington/Wabash which is the staion hosting 5 lines (Green, Brown, Purple Express, Pink and Orange) has less than 100 customers per day until 8/30/2017, then surges up to thousands on 8/31/2017. From this observation, we can infer that Washington/Wabash was either under construction or closed.
+
+By cross checking with [CTA news](https://www.transitchicago.com/washingtonwabash/) Washington/Wabash opened on August 31, 2017. From this information, we can conclude that ~100 customers per day until 8/30/2017 is probably operators or test users.
+
+There are two other dates 2017-10-18 and 29 that have very low ridership (<100), which we can infer that the station was closed, however, since I could not find any other online data to confirm this, the two dates will be included in inferring the average ridership at Washington and Wabash.
+
+For more detailed description, please check [this notebook](https://github.com/hyojunada/chicago_cta/blob/master/notebook/Warm_Up.ipynb) which explains step-by-step of the analysis. 
+
+
+
 
 ![fig1](https://github.com/hyojunada/data_incubator/blob/master/result/followers_to_size_ratio.png)
 ![fig1-1](https://github.com/hyojunada/data_incubator/blob/master/result/followers_to_size_ratio_group.png)
