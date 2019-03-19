@@ -77,12 +77,28 @@ Magnified CTA ridership for the loop
 
 Next, we identify which stations actually have the highest ridership. Before we go into analysis, we have to decide what kind of deli/coffee shop the owner is interested in; is it going to be fast-paced, take-out shop for business people, or is it going to have more relaxed atmosphere for brunch and hanging-out? In our case, the owner is interested in opening a fast-paced deli/coffeeshop. Table below shows that the order of highest average ridership for the stations is indeed different for weekdays and holidays and therefore it is essential to consider the two day types separately for our purpose. 
 
+![fig2](https://github.com/hyojunada/chicago_cta/blob/master/result/mean_ridership.png)
 
+We look at the 5 stations with the highest traffic during the weekdays. 
+<p align="center">
+  <img src="https://github.com/hyojunada/chicago_cta/blob/master/result/highest_station_ridership_W.png">
+</p>
+![fig3](https://github.com/hyojunada/chicago_cta/blob/master/result/highest_station_ridership_W.png)
+
+From this simple scatter plot, we find that Clark/Lake and Lake/State stations have the highest ridership as well as steady growth in the ridership compared to other three stations. Moreover, these two stations are close together, with only two and half blocks apart. A fast take-out deli/coffee shop between these two stations would be ideal. 
+
+![fig4](https://github.com/hyojunada/chicago_cta/blob/master/result/google_map.png)
+
+
+(for more detailed step-by-step analysis
+
+### Business near the highest traffic stations
+
+Since we
 
 Then I looked at the changes in follower size (normalized over company's size) over time for individual companies in each industry
 Shown below is the example for Investment Banking industry. From this I can identify which company's gaining more followers and whether it's growing faster or slower than the company norm. In [this notebook](https://github.com/hyojunada/data_incubator/blob/master/notebook/Section3-fig2_increase_of_followers_over_time.ipynb) you can do this for individual companies and see aggregated result for the entire industry. The aggregated result for the entire industry shows how much online interst the industry has compared to its size and whether the interest is growing or not. 
 
-![fig2](https://github.com/hyojunada/data_incubator/blob/master/result/followers_size_over_time_Investment%20Banking.png)
 
 ## Next Steps
 ### Data aquisition and exploration
