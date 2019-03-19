@@ -4,11 +4,15 @@
 
 ## Project Summary
 
-Our project will help a business owner in Chicago to open his/her shop ina new location. 
+Our project will help a business owner in Chicago to open his/her shop at a new location. 
 The new shop s/he is trying to open is a deli that sells sandwiches and coffee. 
 To help our customer, we will focus on maximizing the expected profits by estimating the revenues and costs. 
-$ profit (P) = Revenue (R) - Cost (C)$.
-First the revenues will be the 
+
+### Revenue
+Revenue will come from the sales of products (sandwiches and coffee), the prices will be adjusted according the cost within a reasonable range. The number of sales will be estimated using the traffic flow by the public transit. 
+
+### Cost
+Cost will come from many different factors. For a quick assessment, we will mainly be using the rent the s/he has to pay. The cost of ingredients and paying the employees will be consistent regardless of the location, therefore we will delve more into it after we are done with the factors with higher impact. 
 
 ## Project motivation
 
@@ -18,28 +22,23 @@ First, due to the characteristics of the those shops, they require a lot of foot
 often times near a public transportation stations. Second, we need to check the business activities in the neighborhood, 
 to see whether the neighborhood is already saturated with similar business
 and also see if there are other business that can help our customer's business. Thirdly, we need to look at the real-estate
-values of the neighborhood. Often times the largest expenses in running a business comes from the rent, therefore considering
-the rent will be important factor in estimating the expected expenses and profits.  
+values of the neighborhood. Often times the largest expenses in running a business comes from the rent, therefore considering the rent will be important factor in estimating the expected expenses and profits.  
 
 ## Project data
-### Opinions data
- - **Linkedin profiles**
+### Transit data
+ - **CTA - Ridership - 'L' Station Entries - Daily Totals**
  
-This database tracks and records the number of employees across companies on daily basis and provides real time insight into how aggressively a company is growing vs its own plans and within its industry.
+The database tracks the number of people to go through the turnstiles at every Chicago "L" station since 2001.
 
- - **Glassdoor reviews**
+ - **CTA - Ridership - Bus Routes - Daily Totals by Route**
  
-The data will consist of reviews on the company fromthe employees and employers.
+The database tracks the number of people to go through the turnstiles at every Chicago CTA bus station since 2001.
  
-### Performance data
+### Business data
 
-- **Job postings**
+- **Zillow Real Estate Data**
 
-This database tracks individual job postings on corporate websites, allowing researchers and data scientists to view overall hiring plans of a company overtime. As well as historical data, users explore in a great detail what types of positions a company is looking to fill, where a company is looking to grow geographically, and in what specific product/business lines the company is looking to expand the most.
-
-- **Stock prices**
-
-This data will consist of stock prices over time for each company
+The database contains the medium residential property renting values for each zip code from 2010.
 
 ## Preliminary Analysis
 ### LinkedIn follower trends
