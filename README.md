@@ -87,16 +87,19 @@ We look at the 5 stations with the highest traffic during the weekdays.
   <img src="https://github.com/hyojunada/chicago_cta/blob/master/result/highest_station_ridership_W.png">
 </p>
 
-From this simple scatter plot, we find that Clark/Lake and Lake/State stations have the highest ridership as well as steady growth in the ridership compared to other three stations. Moreover, these two stations are close together, with only two and half blocks apart. A fast take-out deli/coffee shop between these two stations would be ideal. 
+From this simple scatter plot, we find that Clark/Lake and Lake/State stations have the highest ridership as well as steady growth in the ridership compared to other three stations. Moreover, these two stations are close together, with only two and half blocks apart. A fast take-out deli/coffee shop between these two stations would be ideal.
 
-![fig4](https://github.com/hyojunada/chicago_cta/blob/master/result/google_map.png)
+<p align="center">
+  <img src="https://github.com/hyojunada/chicago_cta/blob/master/result/google_map.png">
+</p>
 
 
-(for more detailed step-by-step analysis
+(for more detailed step-by-step analysis, please checkout this [notebook](https://github.com/hyojunada/chicago_cta/blob/master/notebook/Project-Traffic.ipynb))
 
 ### Business near the highest traffic stations
 
-Since we
+Since we have approximate locations (between Clark/Lake and Lake/State statioins), we want to estimate whether the location is saturated with similar businesses or the existing businesses can bring synergy (if there are a lot of non-competing businesses in the area, the people who work there can be our potential customers). 
+
 
 Then I looked at the changes in follower size (normalized over company's size) over time for individual companies in each industry
 Shown below is the example for Investment Banking industry. From this I can identify which company's gaining more followers and whether it's growing faster or slower than the company norm. In [this notebook](https://github.com/hyojunada/data_incubator/blob/master/notebook/Section3-fig2_increase_of_followers_over_time.ipynb) you can do this for individual companies and see aggregated result for the entire industry. The aggregated result for the entire industry shows how much online interst the industry has compared to its size and whether the interest is growing or not. 
