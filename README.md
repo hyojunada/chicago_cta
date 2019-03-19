@@ -66,14 +66,12 @@ For more detailed description, please check [this notebook](https://github.com/h
 
 ### Traffics
 
-By visualizing CTA 'L' riderships at each stations we can get a general overview of which stations or areas have the highest foot traffic. 
+With the CTA 'L' ridershp data, we can estimate how many potential customers will be passing by the station of our interest, and which day of the week will have the highest customers. 
+By visualizing CTA 'L' riderships at each stations we can get a general overview of which stations or areas have the highest foot traffic. It is 
 
 ![fig1](https://github.com/hyojunada/chicago_cta/blob/master/result/cta_l_ridership.png)
+Magnified CTA ridership for the loop 
 ![fig1-1](https://github.com/hyojunada/chicago_cta/blob/master/result/loop_cta_l_ridership.png)
-
-
-![fig1](https://github.com/hyojunada/data_incubator/blob/master/result/followers_to_size_ratio.png)
-![fig1-1](https://github.com/hyojunada/data_incubator/blob/master/result/followers_to_size_ratio_group.png)
 
 
 Then I looked at the changes in follower size (normalized over company's size) over time for individual companies in each industry
