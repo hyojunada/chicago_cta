@@ -70,8 +70,13 @@ With the CTA 'L' ridershp data, we can estimate how many potential customers wil
 By visualizing CTA 'L' riderships at each stations we can get a general overview of which stations or areas have the highest foot traffic. It is 
 
 ![fig1](https://github.com/hyojunada/chicago_cta/blob/master/result/cta_l_ridership.png)
+
 Magnified CTA ridership for the loop 
+
 ![fig1-1](https://github.com/hyojunada/chicago_cta/blob/master/result/loop_cta_l_ridership.png)
+
+Next, we identify which stations actually have the highest ridership. Before we go into analysis, we have to decide what kind of deli/coffee shop the owner is interested in; is it going to be fast-paced, take-out shop for business people, or is it going to have more relaxed atmosphere for brunch and hanging-out? In our case, the owner is interested in opening a fast-paced deli/coffeeshop. Table below shows that the order of highest average ridership for the stations is indeed different for weekdays and holidays and therefore it is essential to consider the two day types separately for our purpose. 
+
 
 
 Then I looked at the changes in follower size (normalized over company's size) over time for individual companies in each industry
