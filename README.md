@@ -124,4 +124,16 @@ Above analysis will enable us to estimate the appropriate prices for the product
 -**Predictive model for estimating profit and recommendation of the ideal location**
 After elementary analysis reveals an underlying trend that prompts further exploration we will build a predictive model for a recommendation of the location for stores. For my project, I propose to expand these efforts by building a model that takes advantage of four different data sets. The model will allow small business owners to be able to evaluate the potential success of the store and this can be expanded to other business other than deli/coffee shops.
 
+Profit function
 <a href="https://www.codecogs.com/eqnedit.php?latex=Profit&space;(P(x))&space;=&space;Revenu(R(x))&space;-&space;Cost(C(x))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Profit&space;(P(x))&space;=&space;Revenu(R(x))&space;-&space;Cost(C(x))" title="Profit (P(x)) = Revenu(R(x)) - Cost(C(x))" /></a>
+
+Revenue function
+<a href="https://www.codecogs.com/eqnedit.php?latex=R(x)&space;=&space;\sum&space;_{items}Customers(N_{items})&space;*&space;price(x_{items})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R(x)&space;=&space;\sum&space;_{item}Customers(N_{item})&space;*&space;price(x_{item})" title="R(x) = \sum _{items}Customers(N_{items}) * price(x_{items})" /></a>
+
+Cost function
+<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{aligned}&space;C(x)&space;&=&space;fixed\&space;costs&space;&plus;&space;variable\&space;costs&space;\\&space;&=&space;(rent&space;&plus;&space;labor&space;&plus;&space;etc)&space;&plus;&space;(\sum_{items}N_{items}&space;*&space;cost(raw\&space;materials)_{item})&space;\end{aligned}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{aligned}&space;C(x)&space;&=&space;fixed\&space;costs&space;&plus;&space;variable\&space;costs&space;\\&space;&=&space;(rent&space;&plus;&space;labor&space;&plus;&space;etc)&space;&plus;&space;(\sum_{items}N_{items}&space;*&space;cost(raw\&space;materials)_{item})&space;\end{aligned}" title="\begin{aligned} C(x) &= fixed\ costs + variable\ costs \\ &= (rent + labor + etc) + (\sum_{items}N_{items} * cost(raw\ materials)_{item}) \end{aligned}" /></a>
+
+In our predictive model, one of the most important steps is estimating the number of customers, where
+<a href="https://www.codecogs.com/eqnedit.php?latex=total\&space;number\&space;of\&space;customers\&space;(N)&space;=&space;\sum&space;_{item}N_{item}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?total\&space;number\&space;of\&space;customers\&space;(N)&space;=&space;\sum&space;_{item}N_{item}" title="total\ number\ of\ customers\ (N) = \sum _{item}N_{item}" /></a>
+
+For simplicity we can use the average price of the items that are sold at the store multiplied by the total number of customers to substitute for 
