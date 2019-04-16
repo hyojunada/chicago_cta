@@ -87,7 +87,7 @@ From this simple scatter plot, we find that Clark/Lake and Lake/State stations h
 <p align="center">
   <img src="https://github.com/hyojunada/chicago_cta/blob/master/result/google_map.png">
 </p>
-
+Outline of zip code 60601 is drawn in pink in the figure.
 
 (for more detailed step-by-step analysis, please checkout this [notebook](https://nbviewer.jupyter.org/github/hyojunada/chicago_cta/blob/master/notebook/Project-Traffic.ipynb))
 
@@ -136,7 +136,7 @@ Here, the total number of customers is the sum of the customers who bought each 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=N_{total}&space;&=\sum_{item}Customers(N_{item})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?N_{total}&space;&=\sum_{item}Customers(N_{item})" title="N_{total} &=\sum_{item}Customers(N_{item})" /></a>
 
-For simplicity we can use the average price of the items that are sold at the store multiplied by the total number of customers to substite the revenue function. 
+For simplicity, we can use the average price of the items that are sold at the store multiplied by the total number of customers to substitute the revenue function. 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{align*}&space;R&space;&=\sum_{item}Customers(N_{item})*price(x_{item})&space;&=N_{total}&space;*&space;price_{average}&space;\end{align*}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{align*}&space;R&space;&=\sum_{item}Customers(N_{item})*price(x_{item})&space;&=N_{total}&space;*&space;price_{average}&space;\end{align*}" title="\begin{align*} R &=\sum_{item}Customers(N_{item})*price(x_{item}) &=N_{total} * price_{average} \end{align*}" /></a>
 
@@ -148,13 +148,10 @@ Similar to revenue, we can substitute the cost of individual items with the aver
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;fixed\&space;costs&space;&plus;&space;N_{total}*cost_{average}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;fixed\&space;costs&space;&plus;&space;N_{total}*cost_{average}" title="C = fixed\ costs + N_{total}*cost_{average}" /></a>
 
-In our predictive model, one of the most important steps is estimating the number of customers. To do so, I suggest using multi-layer network, where each layer would account for CTA 'L' network, CTA bus route network and residence network. Using networks we can have robust estimation of potential customers how neighboring nodes and different layers affect each other.
+In our predictive model, one of the most important steps is estimating the number of customers. To do so, I suggest using a multi-layer network, where each layer would account for CTA 'L' network, CTA bus route network and residence network. Using networks we can have a robust estimation of potential customers how neighboring nodes and different layers affect each other.
 
-Which leaves us with the fixed costs, which by large part is the rent. The rent is determined by the location and square footage, which I believe would be solvable wih available real-estate data.
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=rent&space;=&space;f(location,&space;ft^2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?rent&space;=&space;f(location,&space;ft^2)" title="rent = f(location, ft^2)" /></a>
-
-Next step is estimating the cost of making each items. The owner of the business has to provide us with this information. However, we can further simplify the problem by having a comparitive goal, such as the cost of an individual item should be less than certain percentage of the price. 
+Next step is estimating the cost of making each item. The owner of the business has to provide us with this information. However, we can further simplify the problem by having a comparative goal, such as the cost of an individual item should be less than a certain percentage of the price. 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=cost&space;\leq&space;p*price(x_{item})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?cost&space;\leq&space;p*price(x_{item})" title="cost \leq p*price(x_{item})" /></a>
 
@@ -162,5 +159,8 @@ Then the profit equation further reduces to
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P&space;\geq&space;(1-p)*price_{average}*N_{total}&space;-&space;fixed\&space;costs" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P&space;\geq&space;(1-p)*price_{average}*N_{total}&space;-&space;fixed\&space;costs" title="P \geq (1-p)*price_{average}*N_{total} - fixed\ costs" /></a>
 
-And now we will have all the information to build a simple predictive model that can robustly estimate the price and profit for each location for different businesses. 
+Which leaves us with the fixed costs, which by large part is the rent. The rent is determined by the location and square footage, which I believe would be solvable with available real-estate data. To predict the cost of renting, we can use simple regression models, or k-nearest predictor by using neighboring listings for function ***f*** 
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=rent&space;=&space;f(location,&space;ft^2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?rent&space;=&space;f(location,&space;ft^2)" title="rent = f(location, ft^2)" /></a>
+
+And now we will have all the information to build a simple predictive model that can robustly estimate the price and profit for each location for different businesses. 
